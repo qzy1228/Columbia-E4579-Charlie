@@ -148,7 +148,7 @@ class CharlieModel(AbstractModel):
                         map(
                             lambda content_id: {
                                 "content_id": content_id,
-                                "p_engage": scores, ## what is this?
+                                "p_engage": random.random(), ## what is this?
                                 "score": kwargs.get("scores", {scores})
                                 .get(content_id, {})
                                 .get("score", None),
@@ -161,7 +161,7 @@ class CharlieModel(AbstractModel):
                             map(
                                 lambda content_id: {
                                     "content_id": content_id,
-                                    "p_engage": scores, ## what is this?
+                                    "p_engage": random.random(), ## what is this?
                                     "score": random.random(),
                                 },
                                 content_ids,
